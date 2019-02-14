@@ -11,4 +11,11 @@ return [
     'authorizer' => Railken\Amethyst\Authorizers\PostAuthorizer::class,
     'faker'      => Railken\Amethyst\Fakers\PostFaker::class,
     'manager'    => Railken\Amethyst\Managers\PostManager::class,
+    'attributes' => [
+        'postable' => [
+            'options' => [
+                Railken\Amethyst\Models\Foo::class => Railken\Amethyst\Managers\FooManager::class,
+            ],
+        ],
+    ],
 ];

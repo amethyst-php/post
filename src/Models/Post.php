@@ -21,4 +21,12 @@ class Post extends Model implements EntityContract
         $this->ini('amethyst.post.data.post');
         parent::__construct($attributes);
     }
+
+    /**
+     * Get all of the owning postable models.
+     */
+    public function postable()
+    {
+        return $this->morphTo();
+    }
 }

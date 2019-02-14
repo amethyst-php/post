@@ -14,8 +14,10 @@ class CreatePostsTable extends Migration
     {
         Schema::create(Config::get('amethyst.post.data.post.table'), function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
-            $table->text('description')->nullable();
+            $table->string('title')->nullable();
+            $table->text('body')->nullable();
+            $table->string('postable_type');
+            $table->integer('postable_id');
             $table->timestamps();
             $table->softDeletes();
         });
