@@ -16,8 +16,8 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->string('title')->nullable();
             $table->text('body')->nullable();
-            $table->string('postable_type');
-            $table->integer('postable_id');
+            $table->string('postable_type')->nullable();
+            $table->integer('postable_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

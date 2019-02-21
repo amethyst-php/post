@@ -21,13 +21,11 @@ class PostSchema extends Schema
             Attributes\IdAttribute::make(),
             Attributes\TextAttribute::make('title'),
             Attributes\LongTextAttribute::make('body'),
-            Attributes\EnumAttribute::make('postable_type', array_keys($postableConfig))
-                ->setRequired(true),
+            Attributes\EnumAttribute::make('postable_type', array_keys($postableConfig)),
             Attributes\MorphToAttribute::make('postable_id')
                 ->setRelationKey('postable_type')
                 ->setRelationName('postable')
-                ->setRelations($postableConfig)
-                ->setRequired(true),
+                ->setRelations($postableConfig),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),
