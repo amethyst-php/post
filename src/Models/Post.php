@@ -3,6 +3,8 @@
 namespace Railken\Amethyst\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Railken\Amethyst\Common\ConfigurableModel;
 use Railken\Lem\Contracts\EntityContract;
@@ -25,7 +27,7 @@ class Post extends Model implements EntityContract
     /**
      * Get all of the owning postable models.
      */
-    public function postable()
+    public function postable(): MorphTo
     {
         return $this->morphTo();
     }
