@@ -21,4 +21,4 @@ return [
             'description' => 'Data ID witch this post is associated'
         ]
     ]
-]
+];
