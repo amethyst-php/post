@@ -18,7 +18,8 @@ class PostSchema extends Schema
         return [
             Attributes\IdAttribute::make(),
             Attributes\TextAttribute::make('title'),
-            Attributes\LongTextAttribute::make('body'),
+            Attributes\LongTextAttribute::make('body')
+                ->setRequired(true),
             Attributes\EnumAttribute::make('postable_type', app('amethyst')->getMorphListable('post', 'postable')),
             Attributes\MorphToAttribute::make('postable_id')
                 ->setRelationKey('postable_type')
