@@ -18,7 +18,7 @@ class PostFaker extends Faker
         $bag = new Bag();
         $bag->set('title', $faker->name);
         $bag->set('body', $faker->text);
-        $bag->set('postable_type', \Railken\Amethyst\Models\Foo::class);
+        $bag->set('postable_type', 'foo');
         $bag->set('postable', FooFaker::make()->parameters()->toArray());
 
         return $bag;
