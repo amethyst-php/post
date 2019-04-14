@@ -18,7 +18,7 @@ return [
         ],
         'postable_id' => [
             'label' => 'ID Commentabile',
-            'description' => 'L'ID del dato con cui è collegato'
+            'description' => 'L\'ID del dato con cui è collegato'
         ]
     ]
 ];
