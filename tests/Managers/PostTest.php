@@ -1,10 +1,10 @@
 <?php
 
-namespace Railken\Amethyst\Tests\Managers;
+namespace Amethyst\Tests\Managers;
 
-use Railken\Amethyst\Fakers\PostFaker;
-use Railken\Amethyst\Managers\PostManager;
-use Railken\Amethyst\Tests\BaseTest;
+use Amethyst\Fakers\PostFaker;
+use Amethyst\Managers\PostManager;
+use Amethyst\Tests\BaseTest;
 use Railken\Lem\Support\Testing\TestableBaseTrait;
 
 class PostTest extends BaseTest
