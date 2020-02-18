@@ -19,11 +19,11 @@ class PostSchema extends Schema
             Attributes\TextAttribute::make('title'),
             Attributes\LongTextAttribute::make('body')
                 ->setRequired(true),
-            Attributes\EnumAttribute::make('postable_type', app('amethyst')->getMorphListable('post', 'postable')),
+            Attributes\EnumAttribute::make('postable_type', app('amethyst')->getDataNames()),
             Attributes\MorphToAttribute::make('postable_id')
                 ->setRelationKey('postable_type')
                 ->setRelationName('postable')
-                ->setRelations(app('amethyst')->getMorphRelationable('post', 'postable')),
+                ->setRelations(app('amethyst')->getDataManagers()),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),
